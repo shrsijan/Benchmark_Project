@@ -11,7 +11,7 @@ using namespace std;
 #define ANSI_COLOR_YELLOW "\x1b[33m"
 #define ANSI_COLOR_RESET "\x1b[0m"
 
-void mainBenchmark() {
+void hardDriveBenchmark() {
     const size_t total_file_size = 1000000000;
     const size_t one_time_size = 100;
     double total_time = 0.0;
@@ -58,11 +58,6 @@ void mainBenchmark() {
     if (remove("dummyOneBillionBytes.txt") != 0) {
         cerr << "Error: Could not delete file." << endl;
     }
-}
-
-int main() {
-    mainBenchmark();
-    return 0;
 }
 
 

@@ -43,11 +43,6 @@ void mainBenchmark() {
     std::cout << ANSI_COLOR_RED << "For additions, multiplication, and division is: " << std::endl;
     std:: cout << total_time << " seconds" << ANSI_COLOR_RESET << std::endl;
 }
-int main() {
-    mainBenchmark();
-    return 0;
-}
-
 
 
 
