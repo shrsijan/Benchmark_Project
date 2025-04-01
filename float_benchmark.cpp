@@ -19,8 +19,11 @@ void mainBenchmark() {
             res = dummy_value + dummy_value;
         }
     }
+    auto end = std::chrono::high_resolution_clock::now();
+    total_time += std::chrono::duration<double>(end - start).count();
+    start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < 100000; ++i) {
 
 }
 
-    // Start benchmarking additions
 
