@@ -57,4 +57,9 @@ void hardDriveBenchmark2() {
     cout << ANSI_COLOR_RED << "Time taken for reading and writing 10000 bytes at a time: "<< endl;
     cout<< total_time << " seconds" << ANSI_COLOR_RESET << endl;
 
+    // Deleting the file after benchmarking
+    if (remove("dummyOneBillionBytes.txt") != 0) {
+        cerr << "Error: Could not delete file." << endl;
+    }
+
 }
