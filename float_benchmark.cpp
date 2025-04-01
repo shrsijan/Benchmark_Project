@@ -37,11 +37,11 @@ void mainBenchmark() {
     }
     end = std::chrono::high_resolution_clock::now();
     total_time += std::chrono::duration<double>(end - start).count();
-    std::cout << ANSI_COLOR_YELLOW << "Benchmark 2:" << ANSI_COLOR_RESET << std::endl;
+    std::cout << ANSI_COLOR_YELLOW << "Benchmark for Floating Point Operation" << ANSI_COLOR_RESET << std::endl;
     std::cout << ANSI_COLOR_GREEN << "64-bit Floating point operation benchmark"
           << ANSI_COLOR_RESET << std::endl;
-    std::cout << ANSI_COLOR_RED << "Which includes additions, multiplication, and division' is: "
-              << total_time << " seconds" << ANSI_COLOR_RESET << std::endl;
+    std::cout << ANSI_COLOR_RED << "For additions, multiplication, and division is: " << std::endl;
+    std:: cout << total_time << " seconds" << ANSI_COLOR_RESET << std::endl;
 }
 int main() {
     mainBenchmark();
