@@ -24,4 +24,9 @@ void memoryBenchmark() {
     auto end = chrono::high_resolution_clock::now();
     total_time = chrono::duration<double>(end - start).count();
     cout << ANSI_COLOR_YELLOW << "Benchmark:" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_GREEN << "Memory Benchmark" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_RED << "Reading from, and writing to array, 4 bytes each time takes: " << endl;
+    cout<< total_time << " seconds" << ANSI_COLOR_RESET << endl;
+}
+
 
