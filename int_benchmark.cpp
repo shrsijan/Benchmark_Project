@@ -44,5 +44,6 @@ void integerBenchmark() {
     cout << ANSI_COLOR_GREEN << "32-bit Integer Operation Benchmark" << ANSI_COLOR_RESET << endl;
     cout << ANSI_COLOR_RED << "Which includes additions, multiplication, and division is: " <<endl;
     cout << total_time << " seconds" << ANSI_COLOR_RESET << endl;
+}
 
 
