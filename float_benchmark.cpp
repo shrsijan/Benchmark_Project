@@ -44,6 +44,10 @@ void mainBenchmark() {
               << total_time << " seconds" << ANSI_COLOR_RESET << std::endl;
 }
 int main() {
+    mainBenchmark();
+    return 0;
+}
+
 
 
 
