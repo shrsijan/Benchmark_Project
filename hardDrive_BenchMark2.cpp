@@ -40,4 +40,11 @@ void hardDriveBenchmark2() {
         cerr << "Error: Could not open file for reading." << endl;
         return;
     }
+    start = chrono::high_resolution_clock::now();
+    vector<char> input_buffer(one_time_size);
+
+    while (input_file.read(input_buffer.data(), one_time_size)) {
+        // Just reading; no processing needed
+    }
+
 }
