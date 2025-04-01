@@ -23,7 +23,11 @@ void mainBenchmark() {
     total_time += std::chrono::duration<double>(end - start).count();
     start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < 100000; ++i) {
+        for (int j = 0; j < 50000; ++j) {
+            res = dummy_value * dummy_value;
+        }
+    }
+    end = std::chrono::high_resolution_clock::now();
 
-}
 
 
