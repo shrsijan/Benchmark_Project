@@ -22,4 +22,12 @@ void hardDriveBenchmark2() {
         cerr << "Error: Could not open file for writing." << endl;
         return;
     }
+    auto start = chrono::high_resolution_clock::now();
+    vector<char> output_buffer(one_time_size, 'A');
+    size_t bytes_written_so_far = 0;
+
+    while (bytes_written_so_far < total_file_size) {
+        output_file.write(output_buffer.data(), one_time_size);
+        bytes_written_so_far += one_time_size;
+    }
 }
