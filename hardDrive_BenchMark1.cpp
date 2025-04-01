@@ -35,6 +35,12 @@ void mainBenchmark() {
     total_time = chrono::duration<double>(end - start).count();
 
     ifstream input_file("dummyOneBillionBytes.txt", ios::binary);
+    if (!input_file) {
+        cerr << "Error: Could not open file for reading." << endl;
+        return;
+    }
+
+
 
 
 
