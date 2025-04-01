@@ -61,6 +61,10 @@ void mainBenchmark() {
 }
 
 int main() {
+    mainBenchmark();
+    return 0;
+}
+
 
 
 
