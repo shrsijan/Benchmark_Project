@@ -43,6 +43,12 @@ void mainBenchmark() {
     vector<char> input_buffer(one_time_size);
 
     while (input_file.read(input_buffer.data(), one_time_size)) {
+        // Just reading; no processing needed
+    }
+
+    input_file.close();
+    end = chrono::high_resolution_clock::now();
+
 
 
 
