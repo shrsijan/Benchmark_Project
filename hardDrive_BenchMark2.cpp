@@ -51,4 +51,10 @@ void hardDriveBenchmark2() {
     end = chrono::high_resolution_clock::now();
     total_time += chrono::duration<double>(end - start).count();
 
+    // Displaying benchmark results
+    cout << ANSI_COLOR_YELLOW << "Second Benchmark for HD Performance:" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_GREEN << "Hard Drive Performance Test 2" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_RED << "Time taken for reading and writing 10000 bytes at a time: "<< endl;
+    cout<< total_time << " seconds" << ANSI_COLOR_RESET << endl;
+
 }
