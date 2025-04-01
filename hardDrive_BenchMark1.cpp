@@ -56,6 +56,12 @@ void mainBenchmark() {
      << total_time << " seconds" << ANSI_COLOR_RESET << endl;
 
     if (remove("dummyOneBillionBytes.txt") != 0) {
+        cerr << "Error: Could not delete file." << endl;
+    }
+}
+
+int main() {
+
 
 
 
