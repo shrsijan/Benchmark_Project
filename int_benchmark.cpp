@@ -18,3 +18,6 @@ void integerBenchmark() {
         for (int j = 0; j < 100000; ++j) {
             res = dummy_value + dummy_value;
         }
+    }
+    auto end = chrono::high_resolution_clock::now();
+    total_time += chrono::duration<double>(end - start).count();
