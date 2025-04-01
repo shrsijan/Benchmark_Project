@@ -48,6 +48,11 @@ void mainBenchmark() {
 
     input_file.close();
     end = chrono::high_resolution_clock::now();
+    total_time += chrono::duration<double>(end - start).count();
+
+    cout << ANSI_COLOR_YELLOW << "Benchmark 4:" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_GREEN << "Hard Drive Performance Test" << ANSI_COLOR_RESET << endl;
+
 
 
 
