@@ -14,4 +14,10 @@ using namespace std;
 void mainBenchmark() {
     const size_t total_file_size = 1000000000;
     const size_t one_time_size = 100;
+    double total_time = 0.0;
+
+    ofstream output_file("dummyOneBillionBytes.txt", ios::binary);
+    if (!output_file) {
+        cerr << "Error: Could not open file for writing." << endl;
+
 
