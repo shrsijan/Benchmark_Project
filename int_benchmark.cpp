@@ -12,3 +12,9 @@ void integerBenchmark() {
     long long dummy_value = 7;
     long long res = 0;
     double total_time = 0.0;
+
+    auto start = chrono::high_resolution_clock::now();
+    for (int i = 0; i < 100000; ++i) {
+        for (int j = 0; j < 100000; ++j) {
+            res = dummy_value + dummy_value;
+        }
