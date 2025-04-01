@@ -19,3 +19,9 @@ void memoryBenchmark() {
         my_arr[i] = static_cast<float>(i);
     }
     for (size_t i = 0; i < array_size; ++i) {
+        dummy_read_value = my_arr[i];
+    }
+    auto end = chrono::high_resolution_clock::now();
+    total_time = chrono::duration<double>(end - start).count();
+    cout << ANSI_COLOR_YELLOW << "Benchmark:" << ANSI_COLOR_RESET << endl;
+
