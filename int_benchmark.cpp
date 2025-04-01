@@ -40,3 +40,9 @@ void integerBenchmark() {
     end = chrono::high_resolution_clock::now();
     total_time += chrono::duration<double>(end - start).count();
 
+    cout << ANSI_COLOR_YELLOW << "Benchmark:" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_GREEN << "32-bit Integer Operation Benchmark" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_RED << "Which includes additions, multiplication, and division is: " <<endl;
+    cout << total_time << " seconds" << ANSI_COLOR_RESET << endl;
+
+
