@@ -47,5 +47,8 @@ void hardDriveBenchmark2() {
     while (input_file.read(input_buffer.data(), one_time_size)) {
         // Just reading; no processing needed
     }
+    input_file.close();
+    end = chrono::high_resolution_clock::now();
+    total_time += chrono::duration<double>(end - start).count();
 
 }
