@@ -30,4 +30,14 @@ void hardDriveBenchmark2() {
         output_file.write(output_buffer.data(), one_time_size);
         bytes_written_so_far += one_time_size;
     }
+    output_file.close();
+    auto end = chrono::high_resolution_clock::now();
+    total_time = chrono::duration<double>(end - start).count();
+
+    // Reading the entire file of 10^9 bytes, 10000 bytes at a time
+    ifstream input_file("dummyOneBillionBytes.txt", ios::binary);
+    if (!input_file) {
+        cerr << "Error: Could not open file for reading." << endl;
+        return;
+    }
 }
