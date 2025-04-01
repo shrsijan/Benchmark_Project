@@ -13,3 +13,9 @@ void memoryBenchmark() {
     double total_time = 0.0;
     double dummy_read_value = 0.0;
     vector<float> my_arr(array_size, 0.0f);
+
+    auto start = chrono::high_resolution_clock::now();
+    for (size_t i = 0; i < array_size; ++i) {
+        my_arr[i] = static_cast<float>(i);
+    }
+    for (size_t i = 0; i < array_size; ++i) {
