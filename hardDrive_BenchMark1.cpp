@@ -30,6 +30,12 @@ void mainBenchmark() {
         output_file.write(output_buffer.data(), one_time_size);
         bytes_written_so_far += one_time_size;
     }
+    output_file.close();
+    auto end = chrono::high_resolution_clock::now();
+    total_time = chrono::duration<double>(end - start).count();
+
+    ifstream input_file("dummyOneBillionBytes.txt", ios::binary);
+
 
 
 
