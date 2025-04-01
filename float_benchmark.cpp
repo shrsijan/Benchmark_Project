@@ -12,6 +12,14 @@ void mainBenchmark() {
     double total_time = 0.0;
     double dummy_value = 8.4;
     double res = 1.2;
+
+    auto start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < 100000; ++i) {
+        for (int j = 0; j < 100000; ++j) {
+            res = dummy_value + dummy_value;
+        }
+    }
+
 }
 
     // Start benchmarking additions
