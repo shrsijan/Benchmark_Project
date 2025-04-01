@@ -19,5 +19,12 @@ void mainBenchmark() {
     ofstream output_file("dummyOneBillionBytes.txt", ios::binary);
     if (!output_file) {
         cerr << "Error: Could not open file for writing." << endl;
+        return;
+    }
+
+    auto start = chrono::high_resolution_clock::now();
+    vector<char> output_buffer(one_time_size, 'A');
+
+
 
 
