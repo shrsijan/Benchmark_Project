@@ -33,6 +33,12 @@ void mainBenchmark() {
     for (int i = 0; i < 100000; ++i) {
         for (int j = 0; j < 20000; ++j) {
             res = dummy_value / dummy_value;
+        }
+    }
+    end = std::chrono::high_resolution_clock::now();
+    total_time += std::chrono::duration<double>(end - start).count();
+    std::cout << ANSI_COLOR_YELLOW << "Benchmark 2:" << ANSI_COLOR_RESET << std::endl;
+
 
 
 
