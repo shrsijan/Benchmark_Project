@@ -52,6 +52,11 @@ void mainBenchmark() {
 
     cout << ANSI_COLOR_YELLOW << "Benchmark 4:" << ANSI_COLOR_RESET << endl;
     cout << ANSI_COLOR_GREEN << "Hard Drive Performance Test" << ANSI_COLOR_RESET << endl;
+    cout << ANSI_COLOR_RED << "Time taken for reading and writing 100 bytes at a time: "
+     << total_time << " seconds" << ANSI_COLOR_RESET << endl;
+
+    if (remove("dummyOneBillionBytes.txt") != 0) {
+
 
 
 
