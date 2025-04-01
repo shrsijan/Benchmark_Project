@@ -4,16 +4,22 @@
 void mainBenchmark();
 void hardDriveBenchmark();
 void hardDriveBenchmark2();
+void integerBenchmark();
+
+using namespace std;
 
 int main() {
-    std::cout << "Running Floating Point Benchmark...\n";
+    cout << "Running Floating Point Benchmark...\n";
     mainBenchmark();
 
-    std::cout << "\nRunning Hard Drive Benchmark...\n";
+    cout << "\nRunning Hard Drive Benchmark...\n";
     hardDriveBenchmark();
 
-    std::cout << "\nRunning Hard Drive Benchmark...\n";
+    cout << "\nRunning Hard Drive Benchmark...\n";
     hardDriveBenchmark2();
+
+    cout << "\nRunning Integer Benchmark...\n";
+    integerBenchmark();
 
     return 0;
 }
