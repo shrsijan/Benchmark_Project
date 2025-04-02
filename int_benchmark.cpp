@@ -13,6 +13,7 @@ void integerBenchmark() {
     long long res = 0;
     double total_time = 0.0;
 
+    // 10^10 additions (of integer constants)
     auto start = chrono::high_resolution_clock::now();
     for (int i = 0; i < 100000; ++i) {
         for (int j = 0; j < 100000; ++j) {
@@ -21,7 +22,7 @@ void integerBenchmark() {
     }
     auto end = chrono::high_resolution_clock::now();
     total_time += chrono::duration<double>(end - start).count();
-
+// 5 × 10^9 multiplication (of integer constants)
     start = chrono::high_resolution_clock::now();
     for (int i = 0; i < 100000; ++i) {
         for (int j = 0; j < 50000; ++j) {
@@ -31,6 +32,7 @@ void integerBenchmark() {
     end = chrono::high_resolution_clock::now();
     total_time += chrono::duration<double>(end - start).count();
 
+// 2 × 10^9 division (of integer constants)
     start = chrono::high_resolution_clock::now();
     for (int i = 0; i < 100000; ++i) {
         for (int j = 0; j < 20000; ++j) {
