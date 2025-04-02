@@ -42,7 +42,7 @@ void mainBenchmark() {
         }
     }
     end = std::chrono::high_resolution_clock::now();
-    total_time += std::chrono::duration<double>(end - start).count()
+    total_time += std::chrono::duration<double>(end - start).count();
 
     // displaying
     std::cout << ANSI_COLOR_YELLOW << "Benchmark for Floating Point Operation" << ANSI_COLOR_RESET << std::endl;
