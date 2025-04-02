@@ -13,14 +13,18 @@ void mainBenchmark() {
     double dummy_value = 8.4;
     double res = 1.2;
 
+    // # 10^10 additions (of double precision floating point constants)
     auto start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < 100000; ++i) {
         for (int j = 0; j < 100000; ++j) {
             res = dummy_value + dummy_value;
         }
     }
+
     auto end = std::chrono::high_resolution_clock::now();
     total_time += std::chrono::duration<double>(end - start).count();
+
+    // 5 × 10^9 multiplication (of double precision floating point constants)
     start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < 100000; ++i) {
         for (int j = 0; j < 50000; ++j) {
@@ -29,6 +33,8 @@ void mainBenchmark() {
     }
     end = std::chrono::high_resolution_clock::now();
     total_time += std::chrono::duration<double>(end - start).count();
+
+    // 2 × 10^9 division (of double precision floating point constants)
     start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < 100000; ++i) {
         for (int j = 0; j < 20000; ++j) {
@@ -36,7 +42,9 @@ void mainBenchmark() {
         }
     }
     end = std::chrono::high_resolution_clock::now();
-    total_time += std::chrono::duration<double>(end - start).count();
+    total_time += std::chrono::duration<double>(end - start).count()
+
+    // displaying
     std::cout << ANSI_COLOR_YELLOW << "Benchmark for Floating Point Operation" << ANSI_COLOR_RESET << std::endl;
     std::cout << ANSI_COLOR_GREEN << "64-bit Floating point operation benchmark"
           << ANSI_COLOR_RESET << std::endl;
